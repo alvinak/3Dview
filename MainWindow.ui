@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="MyQVTKWidget" name="qvtkWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionImport"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionFlatShading"/>
+   <addaction name="actionSmoothShading"/>
+   <addaction name="actionMeshDecimation"/>
+   <addaction name="actionMeshSubdivision"/>
+   <addaction name="actionFillHoles"/>
+   <addaction name="actionBooleanUnion"/>
+  </widget>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionFlatShading">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Flat Shading</string>
+   </property>
+  </action>
+  <action name="actionSmoothShading">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Smooth Shading</string>
+   </property>
+  </action>
+  <action name="actionMeshDecimation">
+   <property name="text">
+    <string>Mesh Decimation</string>
+   </property>
+  </action>
+  <action name="actionMeshSubdivision">
+   <property name="text">
+    <string>Mesh Subdivision</string>
+   </property>
+  </action>
+  <action name="actionFillHoles">
+   <property name="text">
+    <string>Fill Holes</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionBooleanUnion">
+   <property name="text">
+    <string>Boolean Union</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyQVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>myqvtkwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
